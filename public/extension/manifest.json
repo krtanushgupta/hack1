@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "QuickHatke — Quick-Commerce Price Comparator",
+  "version": "1.2.0",
+  "description": "Captures visible product information from Blinkit, Zepto, Flipkart Minutes, and Amazon Minutes to compare real prices and delivery ETAs.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.blinkit.com/*",
+    "https://blinkit.com/*",
+    "https://*.zeptonow.com/*",
+    "https://*.zepto.com/*",
+    "https://*.flipkart.com/*",
+    "https://*.amazon.in/*",
+    "http://localhost:3000/*",
+    "https://*.run.app/*",
+    "https://*.usercontent.goog/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "QuickHatke Comparator"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.blinkit.com/*",
+        "https://blinkit.com/*",
+        "https://*.zeptonow.com/*",
+        "https://*.zepto.com/*",
+        "https://*.flipkart.com/*",
+        "https://*.amazon.in/*",
+        "http://localhost:3000/*",
+        "https://*.run.app/*",
+        "https://*.usercontent.goog/*"
+      ],
+      "js": [
+        "adapters/blinkitAdapter.js",
+        "adapters/zeptoAdapter.js",
+        "adapters/flipkartMinutesAdapter.js",
+        "adapters/amazonMinutesAdapter.js",
+        "content-script.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

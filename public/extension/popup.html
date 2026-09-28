@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickHatke Popup</title>
+    <style>
+      body {
+        width: 340px;
+        margin: 0;
+        padding: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 16px;
+      }
+      .subtitle {
+        font-size: 11px;
+        color: #64748b;
+      }
+      .product-title {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 12px 0 8px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 8px 10px;
+        margin-bottom: 6px;
+        font-size: 12px;
+      }
+      .price {
+        font-family: monospace;
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .unavailable {
+        color: #94a3b8;
+        font-size: 11px;
+      }
+      .winner {
+        background: #ecfdf5;
+        border: 1px solid #6ee7b7;
+        color: #065f46;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #0f172a;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 9px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <span class="brand">QuickHatke</span>
+      <span class="subtitle">Manifest V3 Extension</span>
+    </div>
+    <div id="content">
+      <p class="product-title" id="product-name">Detecting active shopping page...</p>
+      <div id="platforms-list"></div>
+      <div id="winner-box" class="winner" style="display: none;"></div>
+      <a id="dashboard-link" class="btn" href="http://localhost:3000" target="_blank" rel="noopener noreferrer">
+        Open Full QuickHatke Dashboard →
+      </a>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

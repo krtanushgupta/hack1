@@ -1,0 +1,6 @@
+{
+  "name": "QuickHatke — Quick-Commerce Comparator",
+  "description": "Buyhatke-inspired AI comparison tool for quick-commerce platforms (Blinkit, Flipkart Minutes, Amazon Minutes, and Zepto) comparing price, delivery time, offers, and stock availability in structured JSON and tabular formats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
